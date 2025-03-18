@@ -6,6 +6,6 @@ int main(void) {
   cout << "Hello, World\n";
   cout << "Hello, Jenkins\n";
   cout << "I have successfully built and run this  \n";
-  cout << : I have created this print statment for the task four";
+  cout << " I have created this print statment for the task four";
   return 0;
 }
