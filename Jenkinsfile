@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting Build...'
-                sh 'mvn clean install'
+                sh 'g++ -o PES1UG22CS463-1.cpp'
                 echo 'Build Completed Successfully'
             }
         }
@@ -13,20 +13,15 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running Tests...'
-                sh 'mvn test'
+                sh './PES1UG22CS463-1'
                 echo 'Tests Completed Successfully'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
             }
         }
         
         stage('Deploy') {
             steps {
                 echo 'Deploying Application...'
-                sh 'mvn deploy'
+                sh 'git add program.cpp && git commit -m "Adding program.cpp" && git push origin main'
                 echo 'Deployment Successful'
             }
         }
