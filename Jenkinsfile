@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying Application...'
-                sh 'git add program.cpp && git commit -m "Adding program.cpp" && git push origin main'
+                sh 'git add PES1UG22CS463-1.cpp && git commit -m "Adding PES1UG22CS463-1.cpp" && git push origin main'
                 echo 'Deployment Successful'
             }
         }
